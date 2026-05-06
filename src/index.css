@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #080808;
+    color: white;
+  }
+  
+  body {
+    @apply antialiased selection:bg-primary/30 selection:text-white;
+    background-color: #080808;
+  }
+
+  h1, h2, h3, h4 {
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  p {
+    @apply font-light leading-[1.8];
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-16 md:py-32 lg:py-40;
+  }
+  
+  .glass-card {
+    background-color: #111111;
+    border: 1px solid #262626;
+    border-radius: 1rem;
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .premium-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #F97316;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background-color: #080808;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #262626;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #404040;
+}
